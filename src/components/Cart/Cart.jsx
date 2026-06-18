@@ -1,14 +1,14 @@
-import styles from './Cart.module.css';
 import Card from "../UI/Card.jsx";
 import CartItem from "./CartItem.jsx";
+import styles from './Cart.module.css';
 
 const Cart = (props) => {
   return (
-    <Card className={styles.cart}>
+    <Card className={styles.cart} >
       <h2>Your Shopping Cart</h2>
       <ul>
         <CartItem
-          item={{ title: "Test Item", quantity: 3, total: 18, price: 6 }}
+          item={{ title: 'Test Item', quantity: 3, total: 18, price: 6 }}
         />
       </ul>
     </Card>

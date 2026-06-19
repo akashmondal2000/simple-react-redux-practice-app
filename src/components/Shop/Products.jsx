@@ -1,16 +1,35 @@
 import styles from "./Products.module.css";
 import ProductItem from "./ProductItem.jsx";
 
+const DUMMY_PRODUCTS = [
+  {
+    id: "p1",
+    price: 6,
+    title: "book 1",
+    description: "this is book 1",
+  },
+  {
+    id: "p2",
+    price: 5,
+    title: "book 2",
+    description: "this is book 2",
+  },
+];
+
 const Products = (props) => {
   return (
     <section className={styles.products}>
       <h2>Buy your favorite products</h2>
       <ul>
-        <ProductItem
-          title="test"
-          price={6}
-          description="This is a first product - amazing!"
-        />
+        {DUMMY_PRODUCTS.map((product) => (
+          <ProductItem
+            key={product.id}
+            id= {product.id}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+          />
+        ))}
       </ul>
     </section>
   );
